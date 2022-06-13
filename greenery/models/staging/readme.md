@@ -1,7 +1,7 @@
 ## Week 1 Analysis Questions
 
 #### 1. How many users do we have?
-We have *130* users.
+We have **130** users.
 
 ```sql
 select 
