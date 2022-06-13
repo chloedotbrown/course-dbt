@@ -25,7 +25,7 @@ with by_hr as (
 select round(avg(total_orders), 2) from by_hr
 ```
 
-## 3. How long from order to delivery, on average?
+### 3. How long from order to delivery, on average?
 It takes **3 days, 21 hours, and 24 minutes** between order creation and delivery, on average.
 
 ```sql
