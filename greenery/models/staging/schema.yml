@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: stg_greenery__users
+    description: UID by user with contact info
+    columns:
+      - name: user_id
+        tests: 
+          - unique
+          - not_null
+  
+  - name: stg_greenery__addresses
+    description: UID by address with geo info
+    columns:
+      - name: address_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_greenery__promos  
+    description: UID by promo with discount amount and status
+    columns:
+      - name: promo_id
+        tests: 
+          - unique
+          - not_null
+  
+  - name: products
+    description: UID by product with price and inventory
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+  
+  - name: orders
+    description: UID by order with totals, status, links to other table UIDs
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: order_items
+    description: crosswalk of order_id, product_id, and quantity
+    columns:
+      - name: order_item_id
+        tests:
+          - unique
+          - not_null
+
+  - name: events
+    description: UID by event for key actions on shopping platform
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+
+  - name: src_greenery
+    schema: public 
+    database: dbt 
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+
+    tables:
+      - name: users
+        description: UID by user with contact info
+      
+      - name: addresses
+        description: UID by address with geo info
+      
+      - name: promos
+        description: UID by promo with discount and in/active status
+     
+      - name: products
+        description: UID by product with price and inventory
+     
+      - name: orders
+        description: UID by order with totals, status, links to other table UIDs
+     
+      - name: order_items
+        description: crosswalk of order_id, product_id, and quantity
+     
+      - name: events
+        description: UID by event for key actions on shopping platform
