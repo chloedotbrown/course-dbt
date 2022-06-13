@@ -65,7 +65,7 @@ group by total_orders
 order by total_orders
 ```
 
-### 4. How many unique sessions per hour, on average?
+### 5. How many unique sessions per hour, on average?
 There are **16.33 unique sessions** on the website per hour, on average.
 
 ```sql
