@@ -1,7 +1,7 @@
 ## Week 1 Analysis Questions
 
-#### 1. How many users do we have?
-We have **130** users.
+### 1. How many users do we have?
+We have **130 users**.
 
 ```sql
 select 
@@ -9,8 +9,9 @@ select
 from dbt_chloe_b.stg_greenery__users
 ```
 
-#### 2. How many orders per hour, on average?
-We get *7.52* orders per hour, on average.
+
+### 2. How many orders per hour, on average?
+We get **7.52 orders** per hour, on average.
 
 ```sql
 with by_hr as (
@@ -24,8 +25,8 @@ with by_hr as (
 select round(avg(total_orders), 2) from by_hr
 ```
 
-#### 3. How long from order to delivery, on average?
-It takes *3 days, 21 hours, and 24 minutes* between order creation and delivery, on average.
+## 3. How long from order to delivery, on average?
+It takes **3 days, 21 hours, and 24 minutes** between order creation and delivery, on average.
 
 ```sql
 with delivered as (
@@ -38,7 +39,7 @@ with delivered as (
 select avg(delivery_days) from delivered
 ```
 
-#### 4. How many users have made 1, 2, or 3+ orders?
+### 4. How many users have made 1, 2, or 3+ orders?
 | Total orders | User count |
 |:------------:|-----------:|
 |1 order|25|
@@ -63,8 +64,9 @@ from user_orders
 group by total_orders
 order by total_orders
 ```
-#### 4. How many unique sessions per hour, on average?
-There are *16.33 unique sessions* on the website per hour, on average.
+
+### 4. How many unique sessions per hour, on average?
+There are **16.33 unique sessions** on the website per hour, on average.
 
 ```sql
 with by_hr as (
