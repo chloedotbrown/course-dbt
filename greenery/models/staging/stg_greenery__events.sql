@@ -21,7 +21,7 @@ clean as (
         page_url,
         event_type,
         -- Timestamps
-        created_at
+        created_at as created_at_utc
     from source_events
 )
 

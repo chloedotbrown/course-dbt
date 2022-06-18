@@ -24,9 +24,9 @@ clean as (
         shipping_service,
         status,
         -- Timestamps
-        created_at,
-        estimated_delivery_at,
-        delivered_at
+        created_at as created_at_utc,
+        estimated_delivery_at as est_delivery_utc,
+        delivered_at as delivered_at_utc
     from source_orders
 )
 

@@ -20,8 +20,8 @@ clean as (
         email,
         phone_number,
         -- Timestamps
-        created_at,
-        updated_at
+        created_at as created_at_utc,
+        updated_at as updated_at_utc
     from source_users
 )
 
