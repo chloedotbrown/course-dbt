@@ -15,7 +15,7 @@ clean as (
         -- Foreign keys
         order_id,
         product_id,
-        -- User info
+        -- Item info
         quantity
     from source_items
 )
