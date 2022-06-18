@@ -13,7 +13,7 @@ clean as (
         -- Primary key
         address_id,
         -- Address info
-        address,
+        address as street_address,
         zipcode,
         state,
         country
