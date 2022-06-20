@@ -9,7 +9,7 @@ with orders_by_day as (
     date(created_at_utc) as date_order_placed,
     count(distinct order_id) as total_orders,
     sum(order_cost) as total_order_amount,
-    avg(order_cost) as avg_order_amount  
+    round(cast(avg(order_cost) as numeric), 2) as avg_order_amount  
   from  {{ ref('stg_greenery__orders') }}
   group by date(created_at_utc)
 )

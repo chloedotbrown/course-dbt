@@ -22,6 +22,9 @@ select
   o.avg_items_ordered,
   o.first_order_utc,
   o.latest_order_utc,
+  o.status_agg,
+  o.avg_delivery_days,
+  o.avg_diff_del_est,
 -- Profile stats
   a.created_profile_utc,
   a.last_profile_update_utc

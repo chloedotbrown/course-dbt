@@ -11,6 +11,9 @@ models:
       - name: created_profile_utc
         tests:
           - not_null
+      - name: zipcode
+        tests:
+          - zip_codes
 
   - name: fact_orders_by_day
     description: Summary stats for order amounts and totals, grouped by day
