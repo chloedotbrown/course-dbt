@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: Contact information, order history summary, and profile stats
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+      - name: created_profile_utc
+        tests:
+          - not_null
+
+  - name: fact_orders_by_day
+    description: Summary stats for order amounts and totals, grouped by day
+    columns:
+      - name: date_order_placed
+        tests:
+          - not_null
+          - unique
