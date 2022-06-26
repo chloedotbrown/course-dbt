@@ -22,6 +22,6 @@ select
         then event_id end)
         as total_pkg_shipped,
     -- Timestamps
-    min(created_at_utc) as session_start_utc
+    min(occurred_at_utc) as session_start_utc
 from {{ ref('stg_greenery__events') }} 
 group by session_id, user_id

@@ -25,7 +25,7 @@ models:
           - unique
           - not_null
   
-  - name: products
+  - name: stg_greenery__products
     description: UID by product with price and inventory
     columns:
       - name: product_id
@@ -33,7 +33,7 @@ models:
           - unique
           - not_null
   
-  - name: orders
+  - name: stg_greenery__orders
     description: UID by order with totals, status, links to other table UIDs
     columns:
       - name: order_id
@@ -41,7 +41,7 @@ models:
           - unique
           - not_null
 
-  - name: order_items
+  - name: stg_greenery__order_items
     description: crosswalk of order_id, product_id, and quantity
     columns:
       - name: order_item_id
@@ -49,7 +49,7 @@ models:
           - unique
           - not_null
 
-  - name: events
+  - name: stg_greenery__events
     description: UID by event for key actions on shopping platform
     columns:
       - name: event_id
