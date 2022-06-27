@@ -13,7 +13,7 @@ from dbt_chloe_b.stg_greenery__events
 ```
 
 #### By Product
-Averaging all conversion rates by product, the mean rate is **47%**. The product with the highest conversion rate is the String of Pearls (61%), while the lowest is Pothos (34%). We don't have enough information to investigate why these rates differ by product, but some possible causes may be price, a promotion affecting some items but not others, customer reviews, quality of content on the product page, or difficulty of care described on the page.
+Averaging all conversion rates by product (see `dim_prod_conversion` in the product mart), the mean rate is **47%**. The product with the highest conversion rate is the String of Pearls (61%), while the lowest is Pothos (34%). We don't have enough information to investigate why these rates differ by product, but some possible causes may be price, a promotion affecting some items but not others, customer reviews, quality of content on the product page, or difficulty of care described on the page.
 
 ```sql
 select 
