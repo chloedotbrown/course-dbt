@@ -1,0 +1,13 @@
+version: 2
+
+exposures:  
+  - name: Website funnel dashboard
+    description: >
+      Models that are critical to our website funnel dashboard
+    type: dashboard
+    maturity: high
+    owner:
+      name: Chloe Brown
+      email: chloe@greenery.com
+    depends_on:
+      - ref('fact_conversions_by_day')
